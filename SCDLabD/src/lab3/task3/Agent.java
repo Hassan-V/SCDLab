@@ -34,7 +34,6 @@ public class Agent implements CommonFunctions {
         System.out.println("Details Filled");
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }

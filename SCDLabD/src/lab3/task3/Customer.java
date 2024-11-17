@@ -23,7 +23,6 @@ public class Customer {
         System.out.println("Modified customer details");
     }
 
-    // Getters and Setters
     public char getCustomerId() {
         return customerId;
     }
@@ -64,4 +63,3 @@ public class Customer {
         this.age = age;
     }
 }
-
