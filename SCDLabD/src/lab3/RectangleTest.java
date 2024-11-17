@@ -37,4 +37,3 @@ public class RectangleTest {
         assertEquals(48.0, rectangle.getArea(), "Area should be 48 (6 * 8)");
     }
 }
-

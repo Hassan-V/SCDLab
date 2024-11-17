@@ -13,7 +13,6 @@ public class Refund {
         System.out.println("Refund amount is " + amount);
     }
 
-    // Getters and Setters
     public float getAmount() {
         return amount;
     }
