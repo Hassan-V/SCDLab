@@ -37,32 +37,11 @@ public class User extends Thread {
 
     public void withdraw(double amount) {
         if (account == null) {
-            System.out.println("Account is null");
+            System.out.println(name + ": Account is null");
             return;
         }
 
-        synchronized (account) {
-            System.out.println("Initial Balance: " +this.account.getBalance());
-            if (amount > account.getBalance()) {
-                System.out.println("You do not have enough money");
-                return;
-            }
-
-            if (account.getMutex() == 0) {
-                account.setMutex(1);
-                account.setBalance(account.getBalance() - amount);
-                System.out.println("Withdrawing Amount: " + amount);
-                System.out.println("Balance: " + account.getBalance()+"\n");
-                account.setMutex(0);
-            } else {
-                System.out.println("Another User Interacting with the account");
-                try {
-                    Thread.sleep(500);
-                    withdraw(amount);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
+        System.out.println(name + " attempting to withdraw: " + amount);
+        account.withdrawMoney(amount, name);
     }
 }

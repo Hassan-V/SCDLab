@@ -7,7 +7,7 @@ public class Main {
         Agent agent = new Agent(1, 'A');
         System.out.println("Agent Created: ID = " + agent.getId() + ", Name = " + agent.getName());
 
-        Customer customer = new Customer('C', "John Doe", "123 Main St", 1234567890, 25);
+        Customer customer = new Customer('C', "John Doe", "123 lab6.Main St", 1234567890, 25);
         System.out.println("Customer Created: ID = " + customer.getCustomerId() + ", Name = " + customer.getName());
 
         Date dateOfJourney = new Date();
